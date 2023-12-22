@@ -7,9 +7,23 @@
     font-display: swap;
 }
 
+html, body {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto';
+}
+
 .wrapper {
     height: 100vh;
     background: url("../images/background.webp") no-repeat center/100% auto;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
 }
 
 .wrapper::before {
@@ -20,4 +34,65 @@
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+.form-block {
+    max-width: 500px;
+    margin-left: auto;
+    background: rgba(233, 233, 233, 0.25);
+    backdrop-filter: blur(5px);
+    height: 100%;
+    padding: 60px 0;
+    overflow: scroll;
+}
+
+.container {
+    width: 340px;
+    margin: 0 auto;
+}
+
+.switch-box {
+    margin-bottom: 75px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.switch-input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.switch-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 340px;
+    height: 38px;
+    background-color: rgba(233, 233, 233, 0.25);
+    border-radius: 30px;
+    border: 1px solid #153416;
+    position: relative;
+    cursor: pointer;
+}
+
+.switch-label::before {
+    content: '';
+    background-color: #153416;
+    border-radius: 30px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 168px;
+    height: 32px;
+    transition: 0.3s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.switch-input:checked + .switch-label::before {
+    transform: translate(calc(100% - 2px));
+}
+
+.switch-label span {
+    position: relative;
+    flex: 1 1 50%;
 }
