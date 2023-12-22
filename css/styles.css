@@ -24,6 +24,7 @@ body {
     left: 0;
     right: 0;
     color: #fff;
+    font-size: 12px;
 }
 
 .wrapper::before {
@@ -95,4 +96,129 @@ body {
 .switch-label span {
     position: relative;
     flex: 1 1 50%;
+}
+
+.form-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.form-title {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 14px;
+}
+
+.form-input input {
+    display: block;
+    padding: 15px 0 15px 20px;
+    width: 100%;
+    background: rgba(146, 145, 145, 1);
+    border-radius: 30px;
+    border: none;
+    outline: none;
+}
+
+.form-functional {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.remember-box input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+input::placeholder {
+    color: #fff;
+}
+
+.remember-me {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+}
+
+.remember-me::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 2px;
+    border: 1px solid #D9D9D9;
+}
+
+.remember-box input:checked + label::before {
+    border-color: rgba(21, 52, 22, 1);
+    background: rgba(21, 52, 22, 1);
+}
+
+.remember-box input:checked + label::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 4px;
+    width: 7px;
+    height: 12px;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+    transform: rotate(36deg);
+}
+
+.forgot-password {
+    color: rgba(21, 52, 22, 1);
+}
+
+.submit-button {
+    text-align: center;
+    padding: 15px 0;
+    background: rgba(21, 52, 22, 1);
+    border-radius: 30px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.create-account {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.text {
+    color: rgba(21, 52, 22, 1);
+    text-align: center;
+}
+
+.margin-b-30 {
+    margin-bottom: 30px;
+}
+
+.sign-up {
+    color: #fff;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+}
+
+.media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+ul.media li:first-child svg {
+    width: 14px;
 }
