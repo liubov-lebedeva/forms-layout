@@ -6,3 +6,18 @@
     font-weight: 400;
     font-display: swap;
 }
+
+.wrapper {
+    height: 100vh;
+    background: url("../images/background.webp") no-repeat center/100% auto;
+}
+
+.wrapper::before {
+    content: '';
+    background: rgba(22, 21, 21, 0.50);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
